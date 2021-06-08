@@ -17,7 +17,7 @@ class SULGeneratorAddState extends SULGenerator {
                 DFAConstants.ALPHABET_SIZE,
                 DFAConstants.NUM_DFA,
                 DFAConstants.NUM_VERSION,
-                DFAConstants.BASE_BENCHMARK_PATH + "/DFA_add_state_learnLib");
+                DFAConstants.BASE_BENCHMARK_PATH + "/add_state_learnLib");
     }
 
     @Override
@@ -35,7 +35,7 @@ class SULGeneratorRemoveState extends SULGenerator {
                 DFAConstants.ALPHABET_SIZE,
                 DFAConstants.NUM_DFA,
                 DFAConstants.NUM_VERSION,
-                DFAConstants.BASE_BENCHMARK_PATH + "/DFA_remove_state_learnLib"
+                DFAConstants.BASE_BENCHMARK_PATH + "/remove_state_learnLib"
         );
     }
 
@@ -56,7 +56,7 @@ class SULGeneratorAddAlphabet extends SULGenerator {
                 DFAConstants.ALPHABET_SIZE,
                 DFAConstants.NUM_DFA,
                 DFAConstants.NUM_VERSION,
-                DFAConstants.BASE_BENCHMARK_PATH + "/DFA_add_alphabet_learnLib"
+                DFAConstants.BASE_BENCHMARK_PATH + "/add_alphabet_learnLib"
         );
     }
 
@@ -75,7 +75,7 @@ class SULGeneratorRemoveAlphabet extends SULGenerator {
                 DFAConstants.ALPHABET_SIZE,
                 DFAConstants.NUM_DFA,
                 DFAConstants.NUM_VERSION,
-                DFAConstants.BASE_BENCHMARK_PATH + "/DFA_remove_alphabet_learnLib"
+                DFAConstants.BASE_BENCHMARK_PATH + "/remove_alphabet_learnLib"
         );
     }
 
@@ -97,7 +97,7 @@ class SULGeneratorChangeTail extends SULGenerator {
                 DFAConstants.ALPHABET_SIZE,
                 DFAConstants.NUM_DFA,
                 DFAConstants.NUM_VERSION,
-                DFAConstants.BASE_BENCHMARK_PATH + "/DFA_change_tail_learnLib"
+                DFAConstants.BASE_BENCHMARK_PATH + "/change_tail_learnLib"
         );
     }
 
@@ -122,36 +122,12 @@ class TestGenerator extends SULGenerator {
     }
 
     @Override
-    protected DFAModelEditor updateModel(DFAModelEditor modelEditor) {
-
+    protected DFAModelEditor updateModel(DFAModelEditor modelEditor) throws Exception {
         //generate a new random dfa
-        int opt = rand.nextInt(3);
-        switch (opt) {
-            case 0: // add new state
-                modelEditor.addState();
-                break;
-            case 3: // remove existing state
-                if (modelEditor.getModel().getStates().size() < 2) {
-                    return updateModel(modelEditor);
-                } else {
-                    modelEditor.removeState();
-                }
-                break;
-            case 2: // add input symbol
-                modelEditor.addAlphabet();
-                break;
-            case 4: // remove alphabet
-                if (modelEditor.getModel().getInputAlphabet().size() < 2) {
-                    return updateModel(modelEditor);
-                } else {
-                    modelEditor.removeAlphabet();
-                }
-                break;
-            case 1: // change tail state
-                modelEditor.changeTail();
-                break;
-        }
-        return modelEditor;
+        if (modelEditor.getModel().getStates().size() >= 2) {
+            modelEditor.removeState();
+            return modelEditor;
+        } else throw new Exception("model cannot remove more state!");
     }
 
 }
@@ -164,7 +140,7 @@ class SULGeneratorRandom extends SULGenerator {
                 DFAConstants.ALPHABET_SIZE,
                 DFAConstants.NUM_DFA,
                 DFAConstants.NUM_VERSION,
-                DFAConstants.BASE_BENCHMARK_PATH + "/DFA_random_learnLib"
+                DFAConstants.BASE_BENCHMARK_PATH + "/random_learnLib"
         );
     }
 
@@ -188,7 +164,7 @@ class SULGeneratorRandom extends SULGenerator {
                 modelEditor.addAlphabet();
                 break;
             case 4: // remove alphabet
-                if (modelEditor.getModel().getInputAlphabet().size() < 2) {
+                if (modelEditor.getModel().getInputAlphabet().size() < 2 || modelEditor.getModel().getStates().size() < 2) {
                     return updateModel(modelEditor);
                 } else {
                     modelEditor.removeAlphabet();
@@ -206,12 +182,12 @@ class SULGeneratorRandom extends SULGenerator {
 
 class Main {
     public static void main(String[] args) {
-        new SULGeneratorRandom().generate();
-        new SULGeneratorAddState().generate();
-        new SULGeneratorAddAlphabet().generate();
-        new SULGeneratorChangeTail().generate();
-        new SULGeneratorRemoveAlphabet().generate();
-        new SULGeneratorRemoveState().generate();
-//        new TestGenerator().generate();
+//        new SULGeneratorRandom().generate();
+//        new SULGeneratorAddState().generate();
+//        new SULGeneratorAddAlphabet().generate();
+//        new SULGeneratorChangeTail().generate();
+//        new SULGeneratorRemoveAlphabet().generate();
+//        new SULGeneratorRemoveState().generate();
+        new TestGenerator().generate();
     }
 }

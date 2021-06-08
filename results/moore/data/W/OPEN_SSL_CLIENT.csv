@@ -1,20 +1,18 @@
-algorithm,id,num_states,num_alphabet,eq_count,mq_count,distance,duration
-mealy/dynamicTTT,/Nordsec16/client_097e.dot,3,10,1,40,1,32
-mealy/TTT,/Nordsec16/client_097e.dot,3,10,1,24,1,21
-mealy/dynamicTTT,/Nordsec16/client_098f.dot,3,10,1,32,1,22
-mealy/TTT,/Nordsec16/client_098f.dot,3,10,1,24,1,24
-mealy/dynamicTTT,/Nordsec16/client_098j.dot,20,10,8,209,1,479
-mealy/TTT,/Nordsec16/client_098j.dot,20,10,8,209,1,285
-mealy/dynamicTTT,/Nordsec16/client_098l.dot,18,10,2,255,1,280
-mealy/TTT,/Nordsec16/client_098l.dot,18,10,9,220,1,257
-mealy/dynamicTTT,/Nordsec16/client_098m.dot,19,10,1,224,1,231
-mealy/TTT,/Nordsec16/client_098m.dot,19,10,7,188,1,228
-mealy/dynamicTTT,/Nordsec16/client_098za.dot,12,10,1,189,1,143
-mealy/TTT,/Nordsec16/client_098za.dot,12,10,5,116,1,146
-mealy/dynamicTTT,/Nordsec16/client_100m.dot,12,10,1,189,1,145
-mealy/TTT,/Nordsec16/client_100m.dot,12,10,5,116,1,146
-mealy/dynamicTTT,/Nordsec16/client_101.dot,19,10,1,226,1,230
-mealy/dynamicTTT,/Nordsec16/client_102.dot,12,10,1,116,1,147
-mealy/TTT,/Nordsec16/client_102.dot,12,10,5,116,1,142
-mealy/dynamicTTT,/Nordsec16/client_110-pre1.dot,12,10,1,116,1,138
-mealy/TTT,/Nordsec16/client_110-pre1.dot,12,10,5,116,1,144
+algorithm,id,num_states,num_alphabet,eq_count,mq_count,distance,duration,date
+mealy/dynamicTTT,/Nordsec16/client_098f.dot,3,10,1,32,1081,36,2007-10-11 18:23:17
+mealy/TTT,/Nordsec16/client_098f.dot,3,10,1,24,1081,39,2007-10-11 18:23:17
+mealy/dynamicTTT,/Nordsec16/client_098j.dot,20,10,8,209,453,608,2009-01-07 10:50:54
+mealy/TTT,/Nordsec16/client_098j.dot,20,10,8,209,453,298,2009-01-07 10:50:54
+mealy/dynamicTTT,/Nordsec16/client_098l.dot,18,10,2,255,302,349,2009-11-05 16:08:52
+mealy/TTT,/Nordsec16/client_098l.dot,18,10,9,220,302,304,2009-11-05 16:08:52
+mealy/dynamicTTT,/Nordsec16/client_098m.dot,19,10,1,224,112,270,2010-02-25 17:18:23
+mealy/TTT,/Nordsec16/client_098m.dot,19,10,7,188,112,280,2010-02-25 17:18:23
+mealy/dynamicTTT,/Nordsec16/client_098za.dot,12,10,1,189,1560,162,2014-06-05 10:38:57
+mealy/TTT,/Nordsec16/client_098za.dot,12,10,5,116,1560,152,2014-06-05 10:38:57
+mealy/dynamicTTT,/Nordsec16/client_100m.dot,12,10,1,189,1560,159,2014-06-05 10:42:13
+mealy/TTT,/Nordsec16/client_100m.dot,12,10,5,116,1560,191,2014-06-05 10:42:13
+mealy/dynamicTTT,/Nordsec16/client_101.dot,19,10,1,226,747,261,2012-03-14 12:39:00
+mealy/dynamicTTT,/Nordsec16/client_102.dot,12,10,1,116,231,158,2015-01-22 16:12:26
+mealy/TTT,/Nordsec16/client_102.dot,12,10,5,116,231,159,2015-01-22 16:12:26
+mealy/dynamicTTT,/Nordsec16/client_110-pre1.dot,12,10,1,116,321,175,2015-12-10 14:23:10
+mealy/TTT,/Nordsec16/client_110-pre1.dot,12,10,5,116,321,334,2015-12-10 14:23:10
